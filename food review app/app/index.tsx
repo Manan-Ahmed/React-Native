@@ -1,5 +1,7 @@
+import ThemedButton from '@/components/ThemedButton';
 import { ThemedText } from '@/components/ThemedText';
-import { View,Text,StyleSheet,Image } from 'react-native';
+import { View,Text,StyleSheet,Image, Alert } from 'react-native';
+import AntDesign from '@expo/vector-icons/AntDesign';
 
 export default function Welcome() {
  return(
@@ -22,6 +24,28 @@ uri: "https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?q=80&w=1528&a
   </View>
   
   <ThemedText type='link' align='center'>Login to Continue</ThemedText>
+
+<View>
+  <ThemedButton
+  onPress={()=> alert('click on Google')}
+  bgColor='#fff'
+  txtColor='#000'
+  my={10}
+  style={{elevation:1}}
+  icon={<AntDesign name="google" size={24} color="black" />}
+  txt={'login with Google'}
+  />
+  
+  <ThemedButton
+           bgColor='#000'
+           txtColor='#fff'
+           my={10}
+           txt={'login with Apple'}
+           icon={<AntDesign name="apple1" size={24} color="#fff" />} 
+            />
+</View>
+
+  
 </View>
 
   </View>
